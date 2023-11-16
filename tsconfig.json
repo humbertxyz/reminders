@@ -16,7 +16,8 @@
 		"public",
 		".svelte-kit",
 		"dist",
-		"packages"
+		"packages",
+		".git"
 	]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

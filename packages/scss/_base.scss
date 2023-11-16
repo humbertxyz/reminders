@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	width: var(--full-w);
+	height: var(--full-h);
+	color: var(--light);
+	background-color: var(--dark);
+	font-family: var(--ff);
+}
+
+body {
+	width: var(--full-w);
+	height: var(--full-h);
+}
+
