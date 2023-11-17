@@ -10,12 +10,21 @@ html {
 	width: var(--full-w);
 	height: var(--full-h);
 	color: var(--light);
-	background-color: var(--dark);
+	background-color: var(--darker);
 	font-family: var(--ff);
+	font-size: var(--fs);
 }
 
-body {
-	width: var(--full-w);
-	height: var(--full-h);
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
+aside {
+	display: none;
+}
+
+button,
+[role="button"] {
+	cursor: pointer;
+}

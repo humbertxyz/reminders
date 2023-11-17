@@ -1,0 +1,69 @@
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: var(--sidebar-mobile);
+	height: var(--full-h);
+	background-color: var(--darker);
+	z-index: var(--sidebar-z-index);
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+
+	// .sidebar-sections {
+	// 	margin-top: 2rem;
+	// }
+
+	// // Home link with lighter color
+	// .home-link {
+	// 	color: lighten($primary-color, 20%);
+	// }
+
+	// // Login info at the top
+	// .login-info {
+	// 	margin-top: 1rem;
+	// 	font-size: 0.8rem;
+	// 	color: $gray-color;
+	// }
+
+	// // Links sections
+	// .links-section {
+	// 	margin-top: 2rem;
+	// 	a {
+	// 		display: block;
+	// 		margin-bottom: 1rem;
+	// 		color: $dark-color;
+	// 		&:hover {
+	// 			color: $primary-color;
+	// 		}
+	// 	}
+	// }
+
+	// // Settings section at the end
+	// .settings-section {
+	// 	margin-top: 2rem;
+	// 	border-top: 1px solid $gray-color;
+	// 	padding-top: 1rem;
+	// 	h3 {
+	// 		margin-top: 0;
+	// 		margin-bottom: 1rem;
+	// 		font-size: 1.2rem;
+	// 		color: $dark-color;
+	// 	}
+	// 	ul {
+	// 		list-style: none;
+	// 		margin: 0;
+	// 		padding: 0;
+	// 		li {
+	// 			margin-bottom: 0.5rem;
+	// 			a {
+	// 				color: $dark-color;
+	// 				&:hover {
+	// 					color: $primary-color;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+}

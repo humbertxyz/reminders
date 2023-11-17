@@ -1,4 +1,16 @@
 :root {
+	// breakpoints
+	--content-min-mobile: 400px;
+	--content-mobile: 100%;
+	--content-min-desktop: 768px;
+	--content-max-desktop: 992px;
+	--content-desktop: 80vw;
+	--sidebar-mobile: 60vw;
+	--sidebar-desktop: 25vw;
+
+	//z-index
+	--sidebar-z-index: 999;
+
 	// color
 	--white: #FFFFFF;
 	--light: #DDDDDD;
