@@ -1,25 +1,5 @@
-<script>
-	import Sidebar from '$lib/components/Sidebar.svelte';
-	let user = 'John Doe';
-</script>
-
-<Sidebar user={user} />
-<main>
-	<slot></slot>
-</main>
-
 <style>
 	:global(:root) {
-		--content-min-mobile: 400px;
-		--content-mobile: 100%;
-		--content-min-desktop: 768px;
-		--content-max-desktop: 992px;
-		--content-desktop: 80vw;
-		--sidebar-mobile: 60vw;
-		--sidebar-desktop: 25vw;
-
-		--sidebar-z-index: 999;
-
 		--white: #FFFFFF;
 		--light: #DDDDDD;
 		--darky: #333333;
@@ -43,24 +23,8 @@
 		--danger-main: #DC3545;
 		--danger-dark: #A71D2A;
 
-		--full-w: 100%;
-		--full-h: 100%;
-		--space-sm-px: 3px;
-		--space-md-px: 8px;
-
-		/* position */
-
-		/* typography */
 		--ff: Roboto, system-ui, Helvetica, Verdana, Arial, "Times New Roman";
 		--fs: 12px;
-
-		/* visual format */
-
-		/* flex */
-
-		/* grid */
-
-		/* other */
 	}
 
 	:global(*, *::before, *::after) {
@@ -70,17 +34,37 @@
 	}
 
 	:global(html) {
-		width: var(--full-w);
-		height: var(--full-h);
+		width: 100%;
+		height: 100%;
 		color: var(--light);
-		background-color: var(--darker);
+		background-color: var(--black);
 		font-family: var(--ff);
 		font-size: var(--fs);
 	}
 
 	:global(body) {
-		width: var(--full-w);
-		height: var(--full-h);
+		width: 100%;
+		height: 100%;
 		background-color: var(--dark);
+		display: grid;
+		grid-template-areas:
+			"sidebar header"
+			"sidebar page";
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto 1fr;
+		gap: 1rem;
 	}
 </style>
+
+<script>
+	import Sidebar from '$lib/components/Sidebar.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Page from '$lib/components/Page.svelte';
+	let user = 'John Doe';
+</script>
+
+<Sidebar user={user} />
+<Header />
+<Page>
+	<slot></slot>
+</Page>

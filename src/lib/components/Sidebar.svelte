@@ -1,44 +1,61 @@
 
 <script>
+	import Anchor from '$lib/components/Anchor.svelte';
 	export let user = '';
+	const routes = [
+		{
+			name: 'Home',
+			href: '/'
+		},
+		{
+			name: 'Accounts',
+			href: '/accounts'
+		},
+		{
+			name: 'Subscriptions',
+			href: '/subscriptions'
+		}
+	];
+
 </script>
 
 <style>
 	aside {
-		position: fixed;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		width: var(--sidebar-mobile);
-		background-color: var(--darker);
-		z-index: var(--sidebar-z-index);
+		--sidebar: 20vw;
+
+		width: var(--sidebar);
+		padding: 1rem;
+		background-color: var(--darky);
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		gap: 2rem;
+		backdrop-filter: blur(15px);
+		grid-area: sidebar;
 	}
+
+
+	section:nth-child(2) {
+		display: flex;
+		flex-direction: column;
+	}
+
+
 </style>
 
-<aside class="sidebar">
-	<div class="sidebar-section">
+<aside>
+	<section>
 		{#if user}
-			<p>Logged in as {user}</p>
-			<button>Logout</button>
-		{:else}
-			<button>Login</button>
+			<span>Logged in as {user}</span>
 		{/if}
-	</div>
+	</section>
 	
-	<div class="sidebar-section">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/accounts">Accounts</a></li>
-			<li><a href="/subscriptions">Subscriptions</a></li>
-		</ul>
-	</div>
+	<section>
+		{#each routes as route}
+			<Anchor {route} />
+		{/each}
+	</section>
 	
-	<div class="sidebar-section">
-		<h3>Settings</h3>
-		<ul>
-			<li><a href="/settings/profile">Profile</a></li>
-			<li><a href="/settings/preferences">Preferences</a></li>
-			<li><a href="/settings/security">Security</a></li>
-		</ul>
-	</div>
+	<section class="sidebar-section">
+		<span>Settings</span>
+	</section>
 </aside>
