@@ -1,16 +1,15 @@
-<script>
-	export let route = {
-		name: '',
-		href: ''
-	};
+<script lang="ts">
+	import type { Route } from "$lib/typing/constants";
+
+	export let route: Route;
 </script>
 
-<a href={route.href}>{route.name}</a>
+<a href={route.path}>{route.label}</a>
 
 <style>
 	a {
-		text-decoration: none;
 		color: inherit;
+		text-decoration: none;
 		cursor: pointer;
 	}
 </style>
