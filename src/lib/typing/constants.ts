@@ -3,3 +3,7 @@ export interface Route {
 	label: string;
 	highlight?: boolean;
 };
+
+export type AuthRoutes = {
+	redirectSuccessLogin: string;
+}
