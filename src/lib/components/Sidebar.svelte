@@ -1,6 +1,6 @@
 
 <script lang="ts">
-	import Anchor from '$lib/components/Anchor.svelte';
+	import Anchor from '$lib/ui/Anchor.svelte';
 	import type { LoggedUser } from '$lib/typing/auth';
 
 	export let user: LoggedUser | null = null;
