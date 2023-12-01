@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Route } from "$lib/typing/constants";
+	import type { Route } from "$lib/data/constants.types";
 
 	export let route: Route;
 </script>

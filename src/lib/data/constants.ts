@@ -1,4 +1,4 @@
-import type { Route, AuthRoutes } from '$lib/typing/constants';
+import type { Route, AuthRoutes } from './constants.types';
 
 export const AUTH_ROUTES: AuthRoutes = {
 	redirectSuccessLogin: '/dashboard'

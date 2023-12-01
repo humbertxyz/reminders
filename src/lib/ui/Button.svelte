@@ -1,8 +1,7 @@
 <script lang="ts">
-	import type { ButtonProps } from "$lib/typing/ui";
+	import type { ButtonProps } from "./ui.types";
 
 	export let props: ButtonProps;
-
 
 	let buttonClassStyles: string = [
 		props.flavor ? props.flavor : "",
@@ -13,7 +12,6 @@
 	.filter((c) => c.length > 0)
 	.join(" ");
 </script>
-
 
 <button
 	on:click={props.onClick}

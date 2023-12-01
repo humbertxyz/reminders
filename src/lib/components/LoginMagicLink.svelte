@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ButtonProps } from "$lib/typing/ui";
+	import type { ButtonProps } from "$lib/ui/ui.types";
 	import Button from "$lib/ui/Button.svelte";
 
 

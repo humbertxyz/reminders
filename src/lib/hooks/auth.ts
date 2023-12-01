@@ -1,7 +1,6 @@
 import { supabase } from "$lib/db/supabaseClient";
 import { AUTH_ROUTES } from "$lib/data/constants";
 
-
 async function loginWithMagicLink(email_to_login_with: string) {
 	const { data, error } = await supabase.auth.signInWithOtp({
 		email: email_to_login_with,
