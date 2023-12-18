@@ -1,15 +1,15 @@
 <script lang="ts">
 	import type { ButtonProps } from "$lib/ui/ui.types";
 	import Button from "$lib/ui/Button.svelte";
-	import EmailInput from "$lib/ui/EmailInput.svelte";
 	import { registerWithMagicLink, loginWithMagicLink } from "$lib/hooks/auth";
 
-	let email_text: string = $state('');
+	let email: string = $state('');
 
 	let buttonProps: ButtonProps = {
 		text: "Send magic link",
 		onClick: () => {
-			loginWithMagicLink(email_text);
+			console.log("email", email);
+			loginWithMagicLink(email);
 		},
 		disabled: false,
 		type: "button",
@@ -20,11 +20,11 @@
 
 <div class="magic-link">
 	<h1>Log in</h1>
-	<div>
-		<EmailInput email_text={email_text} />
-	</div>
+	<p>
+		If you have an account, we'll send you a magic link to log in.
+	</p>
+	<input type="email" bind:value={email} />
 	<Button props={buttonProps} />
-	<button type="button" on:click={() => loginWithMagicLink(email_text)}>Other button</button>
 </div>
 
 <style>

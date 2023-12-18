@@ -5,7 +5,7 @@ async function loginWithMagicLink(email_to_login_with: string) {
 	const { data, error } = await supabase.auth.signInWithOtp({
 		email: email_to_login_with,
 		options: {
-			shouldCreateUser: false,
+			shouldCreateUser: true,
 			emailRedirectTo: AUTH_ROUTES.redirectSuccessLogin
 		}
 	});
